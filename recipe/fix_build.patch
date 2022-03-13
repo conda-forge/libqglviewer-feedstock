@@ -1,13 +1,20 @@
---- a/libQGLViewer-2.8.0.pro	2019-11-28 03:00:03.000000000 +1000
-+++ b/libQGLViewer-2.8.0.pro	2021-08-03 09:14:06.232237970 +1000
-@@ -1,6 +1,6 @@
+--- libQGLViewer-2.8.0.pro	2022-03-14 08:04:15.000000000 +1000
++++ libQGLViewer-2.8.0.pro	2022-03-14 08:04:40.000000000 +1000
+@@ -1,13 +1,9 @@
  CONFIG       += ordered
  TEMPLATE      = subdirs
 -SUBDIRS       = QGLViewer examples
-+SUBDIRS       = QGLViewer # examples
++SUBDIRS       = QGLViewer
  
  QT_VERSION=$$[QT_VERSION]
  
+ equals (QT_MAJOR_VERSION, 5) {
+ 	cache()
+ }
+-
+-!equals (QT_MAJOR_VERSION, 6) {
+-	SUBDIRS = designerPlugin
+-}
 --- a/QGLViewer/QGLViewer.pro	2019-11-28 02:59:59.000000000 +1000
 +++ b/QGLViewer/QGLViewer.pro	2021-08-03 09:13:03.172237203 +1000
 @@ -148,7 +148,7 @@
