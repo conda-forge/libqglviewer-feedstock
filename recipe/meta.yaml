@@ -37,7 +37,7 @@ requirements:
   host:
     - {{ cdt('mesa-libgl-devel') }}  # [unix]
     - libglu                         # [linux]
-    - qt
+    - qt 5.12.9 *_4
   run:
     - libglu                         # [linux]
 
