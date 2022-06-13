@@ -12,7 +12,7 @@ source:
       - fix_build.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('libqglviewer', max_pin='x.x.x') }}
 
@@ -37,7 +37,7 @@ requirements:
   host:
     - {{ cdt('mesa-libgl-devel') }}  # [unix]
     - libglu                         # [linux]
-    - qt 5.12.9 *_4
+    - qt-main
   run:
     - libglu                         # [linux]
 
