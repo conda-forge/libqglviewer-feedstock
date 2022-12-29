@@ -1,5 +1,5 @@
 {% set name = "libqglviewer" %}
-{% set version = "2.8.0" %}
+{% set version = "2.9.0" %}
 
 package:
   name: {{ name }}
@@ -7,12 +7,12 @@ package:
 
 source:
   - url: http://www.libqglviewer.com/src/libQGLViewer-{{ version }}.tar.gz
-    sha256: 03d2d3394866cdc419f43713aed827262c714cc4facddea7c3ba1d93dae3c4cc
+    sha256: a8181d0dd96b22df062cffee9bf5f6f9a1586c5e014766fbfd4237122eb74c51
     patches:
       - fix_build.patch
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('libqglviewer', max_pin='x.x.x') }}
 
