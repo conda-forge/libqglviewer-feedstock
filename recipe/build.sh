@@ -13,6 +13,7 @@ fi
 qmake \
     PREFIX=$PREFIX \
     LIB_DIR=$PREFIX/lib \
+    INCLUDE_DIR=$PREFIX/include \
     NO_QT_VERSION_SUFFIX=1 \
     QMAKE_CC=${CC} \
     QMAKE_CXX=${CXX} \
