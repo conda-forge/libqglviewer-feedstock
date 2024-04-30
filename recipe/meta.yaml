@@ -7,12 +7,12 @@ package:
 
 source:
   - url: http://www.libqglviewer.com/src/libQGLViewer-{{ version }}.tar.gz
-    sha256: 278f832a0b2d3efbe0d6952119dfbc6058790b7a0f1876909837cb673ce43ff3
+    sha256: aff08bc9096cdd158cfbcd56f12ca5528fe88dadadaf222e1f9be1a4768a7641
     patches:
       - fix_build.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('libqglviewer', max_pin='x.x.x') }}
 
