@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  - url: http://www.libqglviewer.com/src/libQGLViewer-{{ version }}.tar.gz
-    sha256: a4b62385e01ef0d04d652aead4e506c3e38eb6898d6027bedce9265c7f38fff8
+  - url: https://github.com/GillesDebunne/libQGLViewer/archive/refs/tags/v{{ version }}.tar.gz
+    sha256: 278f832a0b2d3efbe0d6952119dfbc6058790b7a0f1876909837cb673ce43ff3
     patches:
       - fix_build.patch
 
