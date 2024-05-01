@@ -7,7 +7,7 @@ package:
 
 source:
   - url: http://www.libqglviewer.com/src/libQGLViewer-{{ version }}.tar.gz
-    sha256: aff08bc9096cdd158cfbcd56f12ca5528fe88dadadaf222e1f9be1a4768a7641
+    sha256: a4b62385e01ef0d04d652aead4e506c3e38eb6898d6027bedce9265c7f38fff8
     patches:
       - fix_build.patch
 
