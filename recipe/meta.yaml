@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  - url: http://www.libqglviewer.com/src/libQGLViewer-{{ version }}.tar.gz
-    sha256: 278f832a0b2d3efbe0d6952119dfbc6058790b7a0f1876909837cb673ce43ff3
+  - url: https://github.com/GillesDebunne/libQGLViewer/archive/refs/tags/v{{ version }}.tar.gz
+    sha256: ea4f9ac627c136a6851ffd3763b154f21c87a58bcec4e5d5b2d07e65a403096b
     patches:
       - fix_build.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('libqglviewer', max_pin='x.x.x') }}
 
@@ -20,12 +20,13 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - make                           # [not win]
     - sed                            # [not win]
     - jom                            # [win]
     # x11 stuff
-    - {{ cdt('mesa-libgl-devel') }}  # [unix]
-    - {{ cdt('mesa-dri-drivers') }}  # [unix]
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}        # [linux]
     - {{ cdt('libxcb') }}            # [linux]
     - {{ cdt('libxdamage') }}        # [linux]
@@ -35,7 +36,6 @@ requirements:
     - {{ cdt('libxau') }}            # [linux]
     - {{ cdt('expat-devel') }}       # [linux]
   host:
-    - {{ cdt('mesa-libgl-devel') }}  # [unix]
     - libglu                         # [linux]
     - qt-main
   run:

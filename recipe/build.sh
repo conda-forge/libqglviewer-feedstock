@@ -22,7 +22,7 @@ qmake \
     QMAKE_OBJDUMP=${OBJDUMP} \
     QMAKE_STRIP=${STRIP} \
     QMAKE_AR="${AR} cqs" \
-    ../libQGLViewer-$PKG_VERSION.pro
+    ../libQGLViewer.pro
 
 make -j$CPU_COUNT
 sed -i "s:(INSTALL_ROOT)/usr:(INSTALL_ROOT)$PREFIX:g" Makefile
