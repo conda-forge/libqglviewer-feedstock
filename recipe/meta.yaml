@@ -25,8 +25,8 @@ requirements:
     - sed                            # [not win]
     - jom                            # [win]
     # x11 stuff
-    - {{ cdt('mesa-libgl-devel') }}  # [unix]
-    - {{ cdt('mesa-dri-drivers') }}  # [unix]
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}        # [linux]
     - {{ cdt('libxcb') }}            # [linux]
     - {{ cdt('libxdamage') }}        # [linux]
@@ -36,7 +36,6 @@ requirements:
     - {{ cdt('libxau') }}            # [linux]
     - {{ cdt('expat-devel') }}       # [linux]
   host:
-    - {{ cdt('mesa-libgl-devel') }}  # [unix]
     - libglu                         # [linux]
     - qt-main
   run:
